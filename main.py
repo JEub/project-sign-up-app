@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from app.router import api_router
 
 
-app = FastAPI(docs_url=None, redoc_url=None)
+app = FastAPI(docs_url=None, redoc_url='/docs')
 app.include_router(api_router, prefix='/v1')
 
 if __name__ == '__main__':
